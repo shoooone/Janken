@@ -11,28 +11,38 @@
             android:layout_width="100dp"
             android:layout_height="100dp" app:srcCompat="@drawable/gu"
             android:id="@+id/gu" android:scaleType="fitCenter"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
+            android:onClick="onJankenButtonTapped"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/choki" android:layout_marginRight="8dp"
             app:layout_constraintTop_toTopOf="@+id/choki"/>
     <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp" app:srcCompat="@drawable/choki"
-            tools:layout_editor_absoluteX="155dp" android:id="@+id/choki" android:scaleType="fitCenter"
-            app:layout_constraintTop_toTopOf="@+id/pa"/>
+            android:id="@+id/choki" android:scaleType="fitCenter"
+            android:onClick="onJankenButtonTapped"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
     <ImageButton
             android:layout_width="100dp"
-            android:layout_height="100dp" app:srcCompat="@drawable/pa" tools:layout_editor_absoluteY="391dp"
-            android:id="@+id/pa" android:scaleType="fitCenter" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"/>
+            android:layout_height="100dp" app:srcCompat="@drawable/pa"
+            android:id="@+id/pa" android:scaleType="fitCenter"
+            android:onClick="onJankenButtonTapped"
+            app:layout_constraintStart_toEndOf="@+id/choki" android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintTop_toTopOf="@+id/choki"/>
     <TextView
             android:text="@string/janken_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp" android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/choki"/>
+            app:layout_constraintBottom_toTopOf="@+id/choki" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
 
 </android.support.constraint.ConstraintLayout>
